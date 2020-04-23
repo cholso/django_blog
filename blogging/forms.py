@@ -1,7 +1,9 @@
+# Adding the Django ModelForm Feature
+
 from django.forms import ModelForm
 from blogging.models import Post
 
-class MyPostForm(ModelForm):
+class PostForm(ModelForm):
     class Meta:
         model = Post
-        fields = ['title', 'body', 'author']
+        fields = ['title', 'text', 'author']

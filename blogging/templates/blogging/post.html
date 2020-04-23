@@ -1,3 +1,4 @@
+{# Added for Django ModelForm addon #}
 {% extends "base.html" %}
 {% block content %}
 <form method="post">
@@ -5,6 +6,6 @@
 	
 	{{form}}
 
-	<input type="submit" value="Submit">
+	<button type="submit" class="btn btn-default"&gt;Submit</button>
 </form>
 {% endblock %}

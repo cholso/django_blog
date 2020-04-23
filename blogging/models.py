@@ -12,7 +12,7 @@ class Post(models.Model):
     published_date = models.DateTimeField(blank=True, null=True)
 
     def __str__(self):
-            return self.title
+        return self.title
 
 class Category(models.Model):
 
@@ -23,9 +23,9 @@ class Category(models.Model):
     # posts, one post can have many categories and one category can have many posts 
     posts = models.ManyToManyField(Post, blank=True, related_name='categories')
 
+    class Meta: 
+        verbose_name_plural = 'Categories'
+
     def __str__(self):
         return self.name
-    
-    class Meta: 
-        verbose_name_plural = 'categories'
 

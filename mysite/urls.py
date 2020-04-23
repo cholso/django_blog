@@ -16,7 +16,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from django.contrib.auth.views import LoginView, LogoutView
-from mysite.feeds import LatestEntriesFeed
+# from blogging.feed import LatestEntriesFeed
+
 
 urlpatterns = [
     path('polling/', include('polling.urls')),
@@ -24,6 +25,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('login/', LoginView.as_view(template_name='login.html'), name="login"),
     path('logout/', LogoutView.as_view(next_page='/'), name="logout"),
-    path('latest/feed/', LatestEntriesFeed()),
-    path('accounts/', include('allauth.urls')),
+    #path('latest/feed/', LatestEntriesFeed()),
+    # path('accounts/', include('allauth.urls')),
 ]
